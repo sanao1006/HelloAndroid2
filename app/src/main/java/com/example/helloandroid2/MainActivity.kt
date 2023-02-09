@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         val listener = HelloListner()
         btClick.setOnClickListener(listener)
 
+        val btClear = findViewById<Button>(R.id.btClear)
+        btClear.setOnClickListener(listener)
+
     }
 
     private  inner class  HelloListner: View.OnClickListener {
