@@ -26,9 +26,19 @@ class MainActivity : AppCompatActivity() {
         override fun onClick(v: View) {
             val input = findViewById<EditText>(R.id.etName)
             val output = findViewById<TextView>(R.id.tvOutput)
-            val inputStr = input.text.toString()
+            when(v.id){
+                R.id.btClick -> {
+                    val inputStr = input.text.toString()
+                    output.text = inputStr + "さん、こんにちは"
+                }
+                R.id.btClear -> {
+                    input.setText("")
+                    output.text = ""
+                }
+            }
 
-            output.text = inputStr + "さん、こんにちは"
+
+
         }
     }
 }
